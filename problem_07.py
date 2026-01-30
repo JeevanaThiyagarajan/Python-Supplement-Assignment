@@ -1,6 +1,7 @@
 # Problem 7: Calculate factorial of a number
 # Find and fix the error
 
+
 def factorial(n):
     result = 1
     for i in range(1, n + 1):
