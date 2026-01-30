@@ -9,7 +9,7 @@ def is_prime(n):
             return False
     return True
 
-number = 17
+number = 29
 
 if is_prime(number):
     print(number, "is a prime number")

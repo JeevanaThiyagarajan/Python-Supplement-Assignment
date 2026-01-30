@@ -9,6 +9,11 @@ def calculator(a, b, operation):
     elif operation == "multiply":
         return a * b
     elif operation == "divide":
+        if b == 0:
+            return "Error: Cannot divide by zero"
         return a / b
+    else:
+        return "Error: Invalid operation"
 
 print(f"10 / 0 = {calculator(10, 0, 'divide')}")
+print(f"10 / 2 = {calculator(10, 2, 'divide')}")

@@ -2,7 +2,8 @@
 # Find and fix the error
 
 words = ["Hello", "World", "Python"]
-sentence = ""
-for word in words:
-    sentence += word + " "
+
+# Using join to combine words with a space
+sentence = " ".join(words)
+
 print(f"Sentence: {sentence}")
