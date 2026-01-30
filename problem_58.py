@@ -8,9 +8,9 @@ def binary_search(arr, target):
         if arr[mid] == target:
             return mid
         elif arr[mid] < target:
-            left = mid
+            left = mid + 1
         else:
-            right = mid
+            right = mid - 1
     return -1
 
 numbers = [1, 3, 5, 7, 9, 11, 13, 15]

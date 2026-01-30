@@ -1,12 +1,14 @@
 # Problem 82: Remove adjacent duplicates
 # Find and fix the error
 
-def remove_adjacent_duplicates(text):
+def remove_all_duplicates(text):
+    seen = set()
     result = []
     for char in text:
-        if len(result) == 0 or result[-1] != char:
+        if char not in seen:
+            seen.add(char)
             result.append(char)
     return "".join(result)
 
 s = "programming"
-print(f"After removal: {remove_adjacent_duplicates(s)}")
+print(f"After removing all duplicates: {remove_all_duplicates(s)}")

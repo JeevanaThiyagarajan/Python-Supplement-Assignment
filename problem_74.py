@@ -2,17 +2,23 @@
 # Find and fix the error
 
 def first_non_repeating(text):
-    char_count = {}
-    for char in text:
-        if char in char_count:
-            char_count[char] += 1
-        else:
-            char_count[char] = 1
+    # Convert to lowercase to make it case-insensitive
+    text_lower = text.lower()
     
-    for char in text:
-        if char_count[char] == 1:
+    # Count letters only
+    char_count = {}
+    for char in text_lower:
+        if char.isalpha():  # ignore digits, spaces, punctuation
+            char_count[char] = char_count.get(char, 0) + 1
+    
+    # Find first non-repeating letter in original order
+    for char in text_lower:
+        if char.isalpha() and char_count[char] == 1:
             return char
-    return None
+    
+    return None  # no non-repeating character
 
-word = "programming"
-print(f"First non-repeating: {first_non_repeating(word)}")
+# Example usage
+word = "Programming!"
+result = first_non_repeating(word)
+print(f"First non-repeating letter: {result}")

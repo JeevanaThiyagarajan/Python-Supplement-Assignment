@@ -4,8 +4,9 @@
 def count_set_bits(n):
     count = 0
     while n:
-        count += n & 1
-        n = n >> 1
+        count += n & 1  # Increment if last bit is 1
+        n = n >> 1      # Shift right
     return count
 
-print(f"Set bits in 15: {count_set_bits(15)}")
+# Example
+print(f"Set bits in 15: {count_set_bits(15)}")  # Output: 4

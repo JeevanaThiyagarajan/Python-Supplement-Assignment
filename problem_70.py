@@ -1,11 +1,13 @@
 # Problem 70: Find all prime numbers up to n
 # Find and fix the error
 
+import math
+
 def find_primes(n):
     primes = []
     for num in range(2, n):
         is_prime = True
-        for i in range(2, num):
+        for i in range(2, int(math.sqrt(num)) + 1):
             if num % i == 0:
                 is_prime = False
                 break

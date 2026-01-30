@@ -3,9 +3,7 @@
 
 def reverse_words(sentence):
     words = sentence.split()
-    reversed_words = []
-    for word in words:
-        reversed_words.append(word[::-1])
+    reversed_words = [word[::-1] for word in words]  # list comprehension
     return " ".join(reversed_words)
 
 text = "Hello World"
