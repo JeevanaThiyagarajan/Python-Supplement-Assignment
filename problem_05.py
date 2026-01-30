@@ -2,9 +2,11 @@
 # Find and fix the error
 
 text = "Hello World"
-vowels = "aeiou"
+vowels = "aeiouAEIOU"
 count = 0
+
 for char in text:
     if char in vowels:
         count += 1
-print(f"Number of vowels: {count}")
+
+print("Number of vowels:", count)
